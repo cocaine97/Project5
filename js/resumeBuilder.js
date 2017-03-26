@@ -86,7 +86,8 @@ if(bio.skills.length > 0)
 		$("#skills").append(formattedSkills);
 	}
 }
-
+function displayWork()
+{
 $("#workExperience").append(HTMLworkStart);
 for(x in work.jobs)
 {
@@ -105,3 +106,13 @@ for(x in work.jobs)
 	$(".work-entry:last").append(lOc);
 
 }
+}
+
+displayWork();
+
+$(document).click(function(loc) {
+	var x = loc.pageX;
+	var y = loc.pageY;
+	logClicks(x,y);
+  
+});
