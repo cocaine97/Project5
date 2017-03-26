@@ -51,12 +51,20 @@ var education = {
 
 var work = {
 	"jobs": [{
-		"employer": "null",
-		"title": "null",
+		"employer": "Could be Anyone",
+		"title": "Full-Stack Web Developer",
 		"location": "India",
-		"dates": "null",
-		"description": "haven't had a job yet im learning."
-	}]
+		"dates": "2019",
+		"description": "Haven't had any jobs yet but hope i get one !"
+	},
+	{
+		"employer": "ABC",
+		"title": "Web Ninja",
+		"location": "India",
+		"dates": "2019",
+		"description": "\m/"
+	}
+	]
 }
 
 var Projects = {
@@ -68,4 +76,32 @@ var Projects = {
 	}]
 }
 
+if(bio.skills.length > 0)
+{
+	$("#header").append(HTMLskillsStart);
+	var formattedSkills;
+	for(var i=0;i<bio.skills.length;i++)
+	{
+		formattedSkills= HTMLskills.replace("%data%",bio.skills[i]);
+		$("#skills").append(formattedSkills);
+	}
+}
 
+$("#workExperience").append(HTMLworkStart);
+for(x in work.jobs)
+{
+	var Emp = HTMLworkEmployer.replace("%data%",work.jobs[x].employer);
+		var tiTle = HTMLworkTitle.replace("%data%",work.jobs[x].title);
+	var formattedETitle = Emp + tiTle;
+	$(".work-entry:last").append(formattedETitle);
+
+	var dAtes = HTMLworkDates.replace("%data%",work.jobs[x].dates);
+	$(".work-entry:last").append(dAtes);
+
+	var desc = HTMLworkDescription.replace("%data%",work.jobs[x].description);
+	$(".work-entry:last").append(desc);
+
+	var lOc = HTMLworkLocation.replace("%data%",work.jobs[x].location);
+	$(".work-entry:last").append(lOc);
+
+}
