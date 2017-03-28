@@ -1,3 +1,5 @@
+
+/* Sorry Im terrible at this */
 body,
 div,
 ul,
@@ -26,7 +28,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: black;
   line-height: 48px;
   display: inline;
 }
@@ -118,7 +120,7 @@ a {
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-color: #357500;
   padding-bottom: 10px;
   clear: both;
 }
